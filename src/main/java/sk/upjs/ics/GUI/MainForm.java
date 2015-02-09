@@ -217,6 +217,22 @@ public class MainForm extends JFrame {
             }
         });
 
+        btnStatistika.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnStatistikaActionPerformed(e);
+            }
+        });
+
+        btnVydavky.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnVydavkyActionPerformed(e);
+            }
+        });
+
         // Tlačidlo ODHLÁSIŤ. [DONE]
         btnOdhlasit.addActionListener(new ActionListener() {
             @Override
@@ -317,6 +333,22 @@ public class MainForm extends JFrame {
         editableLogin.setLocationRelativeTo(CENTER_SCREEN);
         editableLogin.setTitle("Kniha jázd - úprava profilu");
         editableLogin.setVisible(true);
+    }
+
+    private void btnStatistikaActionPerformed(ActionEvent e) {
+        Grafy grafy = new Grafy(login, this);
+
+        grafy.setLocationRelativeTo(CENTER_SCREEN);
+        grafy.setTitle("Kniha jázd - štatistika");
+        grafy.setVisible(true);
+    }
+
+    private void btnVydavkyActionPerformed(ActionEvent e) {
+        VydavkyForm vydavkyForm = new VydavkyForm(selectedAuto, this);
+
+        vydavkyForm.setLocationRelativeTO(CENTER_SCREEN);
+        vydavkyForm.setTitle("Kniha jázd - výdavky");
+        vydavkyForm.setVisible(true);
     }
 
     // Akcia tlačidla pre odhlásenie. [DONE]
