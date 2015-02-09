@@ -344,9 +344,9 @@ public class MainForm extends JFrame {
     }
 
     private void btnVydavkyActionPerformed(ActionEvent e) {
-        VydavkyForm vydavkyForm = new VydavkyForm(selectedAuto, this);
+        VydavkyForm vydavkyForm = new VydavkyForm(login, this);
 
-        vydavkyForm.setLocationRelativeTO(CENTER_SCREEN);
+        vydavkyForm.setLocationRelativeTo(CENTER_SCREEN);
         vydavkyForm.setTitle("Kniha jázd - výdavky");
         vydavkyForm.setVisible(true);
     }
