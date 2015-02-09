@@ -20,10 +20,10 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import net.miginfocom.swing.MigLayout;
-import sk.upjs.ics.cestak.Auto;
-import sk.upjs.ics.cestak.AutoDAO;
+import sk.upjs.ics.cestak.entity.Auto;
+import sk.upjs.ics.cestak.dao.AutoDAO;
 import sk.upjs.ics.cestak.DaoFactory;
-import sk.upjs.ics.cestak.Login;
+import sk.upjs.ics.cestak.entity.Login;
 
 /**
  * PridatAuto okno. Beta verzia

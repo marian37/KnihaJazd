@@ -1,5 +1,11 @@
 package sk.upjs.ics.cestak;
 
+import sk.upjs.ics.cestak.dao.JazdaDAO;
+import sk.upjs.ics.cestak.dao.PrihlasenieDAO;
+import sk.upjs.ics.cestak.dao.AutoDAO;
+import sk.upjs.ics.cestak.datbazoveDao.DtbJazdaDAO;
+import sk.upjs.ics.cestak.datbazoveDao.DtbPrihlasenieDAO;
+import sk.upjs.ics.cestak.datbazoveDao.DtbAutoDAO;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,5 +1,9 @@
 package sk.upjs.ics.cestak;
 
+import sk.upjs.ics.cestak.entity.Jazda;
+import sk.upjs.ics.cestak.entity.Login;
+import sk.upjs.ics.cestak.entity.Auto;
+import sk.upjs.ics.cestak.dao.JazdaDAO;
 import java.util.List;
 import java.util.LinkedList;
 import javax.swing.table.AbstractTableModel;

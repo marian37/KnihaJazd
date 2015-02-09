@@ -1,5 +1,6 @@
 package sk.upjs.ics.cestak;
 
+import sk.upjs.ics.cestak.entity.Auto;
 import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JList;

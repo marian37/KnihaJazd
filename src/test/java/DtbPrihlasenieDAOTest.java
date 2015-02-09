@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import sk.upjs.ics.cestak.DaoFactory;
-import sk.upjs.ics.cestak.Login;
-import sk.upjs.ics.cestak.PrihlasenieDAO;
+import sk.upjs.ics.cestak.entity.Login;
+import sk.upjs.ics.cestak.dao.PrihlasenieDAO;
 
 /**
  *

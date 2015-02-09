@@ -15,11 +15,11 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import net.miginfocom.swing.MigLayout;
-import sk.upjs.ics.cestak.Auto;
+import sk.upjs.ics.cestak.entity.Auto;
 import sk.upjs.ics.cestak.DaoFactory;
-import sk.upjs.ics.cestak.Jazda;
-import sk.upjs.ics.cestak.JazdaDAO;
-import sk.upjs.ics.cestak.Login;
+import sk.upjs.ics.cestak.entity.Jazda;
+import sk.upjs.ics.cestak.dao.JazdaDAO;
+import sk.upjs.ics.cestak.entity.Login;
 
 /**
  * PridatCestuForm Beta verzia

@@ -3,12 +3,12 @@ import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
-import sk.upjs.ics.cestak.Auto;
-import sk.upjs.ics.cestak.AutoDAO;
+import sk.upjs.ics.cestak.entity.Auto;
+import sk.upjs.ics.cestak.dao.AutoDAO;
 import sk.upjs.ics.cestak.DaoFactory;
-import sk.upjs.ics.cestak.Jazda;
-import sk.upjs.ics.cestak.JazdaDAO;
-import sk.upjs.ics.cestak.Login;
+import sk.upjs.ics.cestak.entity.Jazda;
+import sk.upjs.ics.cestak.dao.JazdaDAO;
+import sk.upjs.ics.cestak.entity.Login;
 
 /**
  *

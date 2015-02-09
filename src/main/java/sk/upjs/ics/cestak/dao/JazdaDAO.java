@@ -1,6 +1,9 @@
-package sk.upjs.ics.cestak;
+package sk.upjs.ics.cestak.dao;
 
 import java.util.List;
+import sk.upjs.ics.cestak.entity.Auto;
+import sk.upjs.ics.cestak.entity.Jazda;
+import sk.upjs.ics.cestak.entity.Login;
 
 /**
  *

@@ -38,14 +38,14 @@ import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import net.miginfocom.swing.MigLayout;
-import sk.upjs.ics.cestak.Auto;
-import sk.upjs.ics.cestak.AutoDAO;
+import sk.upjs.ics.cestak.entity.Auto;
+import sk.upjs.ics.cestak.dao.AutoDAO;
 import sk.upjs.ics.cestak.AutoListCellRenderer;
 import sk.upjs.ics.cestak.DaoFactory;
-import sk.upjs.ics.cestak.Jazda;
-import sk.upjs.ics.cestak.JazdaDAO;
+import sk.upjs.ics.cestak.entity.Jazda;
+import sk.upjs.ics.cestak.dao.JazdaDAO;
 import sk.upjs.ics.cestak.JazdaTableModel;
-import sk.upjs.ics.cestak.Login;
+import sk.upjs.ics.cestak.entity.Login;
 
 /**
  * MainForm
@@ -64,6 +64,8 @@ public class MainForm extends JFrame {
     private JButton btnVymazatAuto = new JButton("Vymazať auto");
     private JButton btnUpravitUzivatela = new JButton("Upraviť profil");
     private JButton btnOdhlasit = new JButton("Odhlásiť");
+    private JButton btnStatistika = new JButton("Štatistika");
+    private JButton btnVydavky = new JButton("Výdavky");
 
     // Comboboxy
     private JComboBox comboAuta = new JComboBox();
@@ -145,6 +147,10 @@ public class MainForm extends JFrame {
 
         btnVymazatCestu.setEnabled(false);
         btnUpravitUzivatela.setEnabled(true);
+
+        add(btnStatistika);
+        add(btnVydavky);
+
         add(btnOdhlasit, "tag cancel, span 1");
         // ////////////////////////////////////////////////////////////////////
 
@@ -233,7 +239,7 @@ public class MainForm extends JFrame {
         // ////////////////////////////////////////////////////////////////////
         ImageIcon img = new ImageIcon("75x54.png");
         setIconImage(img.getImage());
-        
+
         setPreferredSize(new Dimension(700, 500));
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

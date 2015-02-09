@@ -1,0 +1,6 @@
+CREATE TABLE Vydavok (
+    id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    autoSPZ VARCHAR(7) NOT NULL,
+    kategoria VARCHAR(50),
+    suma DECIMAL(5,2)
+);

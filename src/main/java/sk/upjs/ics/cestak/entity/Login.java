@@ -1,4 +1,4 @@
-package sk.upjs.ics.cestak;
+package sk.upjs.ics.cestak.entity;
 
 /**
  *

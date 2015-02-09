@@ -1,4 +1,7 @@
-package sk.upjs.ics.cestak;
+package sk.upjs.ics.cestak.dao;
+
+import sk.upjs.ics.cestak.entity.Login;
+import sk.upjs.ics.cestak.entity.Pouzivatel;
 
 /**
  *

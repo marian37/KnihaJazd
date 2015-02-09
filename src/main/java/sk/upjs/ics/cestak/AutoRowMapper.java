@@ -1,5 +1,6 @@
 package sk.upjs.ics.cestak;
 
+import sk.upjs.ics.cestak.entity.Auto;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
