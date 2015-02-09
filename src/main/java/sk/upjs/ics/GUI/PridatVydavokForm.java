@@ -3,7 +3,6 @@ package sk.upjs.ics.GUI;
 import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
@@ -39,21 +38,23 @@ public class PridatVydavokForm extends JDialog {
     private String autoSPZ;
     private Vydavok vydavok;
 
-    private VydavokDAO vydavokDAO = DaoFactory.INSTANCE.vydavokDAO();
+    private VydavkyForm parent;
+
+    private VydavokDAO vydavokDAO = DaoFactory.INSTANCE.vydavokDao();
 
     // ************************* Konštruktory *********************************
-    public PridatVydavokForm(Login login, String autoSPZ, Frame parent) {
+    public PridatVydavokForm(Login login, String autoSPZ, VydavkyForm parent) {
         this(parent, true);
         this.autoSPZ = autoSPZ;
         this.login = login;
     }
-
-    private PridatVydavokForm(Frame parent) {
+/*
+    private PridatVydavokForm(VydavkyForm parent) {
         this(new Login(), new String(), parent);
     }
-
+*/
     // Konštruktor pre dolovanie dát do editovacieho okna. [DONE]
-    public PridatVydavokForm(Vydavok vydavok, Frame parent) {
+    public PridatVydavokForm(Vydavok vydavok, VydavkyForm parent) {
         this(parent, true);
         this.vydavok = vydavok;
         DecimalFormat df = new DecimalFormat("#.##");
@@ -62,9 +63,10 @@ public class PridatVydavokForm extends JDialog {
         txtSuma.setText(df.format(vydavok.getSuma()));
     }
 
-    public PridatVydavokForm(Frame parent, boolean modal) {
+    public PridatVydavokForm(VydavkyForm parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.parent = parent;
     }
 
     @SuppressWarnings("unchecked")
@@ -75,7 +77,7 @@ public class PridatVydavokForm extends JDialog {
         add(txtKategoria, "wrap");
 
         add(lblSuma);
-        add(txtSuma);
+        add(txtSuma, "wrap");
 
         /* ******************** AKCIE ************************ */
         add(btnUlozit, "tag ok");
@@ -99,7 +101,7 @@ public class PridatVydavokForm extends JDialog {
         /* ******************** AKCIE ************************ */
 
         // Nastavenia
-        setPreferredSize(new Dimension(500, 285));
+        setPreferredSize(new Dimension(300, 115));
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         pack();
@@ -116,15 +118,16 @@ public class PridatVydavokForm extends JDialog {
 
             vydavokDAO.saveVydavok(vydavok);
 
+            parent.obnovVydavky();
             dispose();
         } else {
-            // Ak výdavok len upravujeme.
-            vydavok.setAutoSPZ(autoSPZ);
+            // Ak výdavok len upravujeme.            
             vydavok.setKategoria(txtKategoria.getText());
             vydavok.setSuma(Double.parseDouble(txtSuma.getText()));
 
             vydavokDAO.saveVydavok(vydavok);
 
+            parent.obnovVydavky();
             dispose();
         }
     }
@@ -133,7 +136,7 @@ public class PridatVydavokForm extends JDialog {
     public static void main(String arg[]) throws UnsupportedLookAndFeelException {
         UIManager.setLookAndFeel(new WindowsLookAndFeel());
 
-        PridatVydavokForm pridatVydavokForm = new PridatVydavokForm(new javax.swing.JFrame(), true);
+        PridatVydavokForm pridatVydavokForm = new PridatVydavokForm(null, true);
         pridatVydavokForm.setVisible(true);
         pridatVydavokForm.setTitle("Kniha jázd - pridanie nového výdavku");
         pridatVydavokForm.setLocationRelativeTo(CENTER_SCREEN);

@@ -3,9 +3,11 @@ package sk.upjs.ics.cestak;
 import sk.upjs.ics.cestak.dao.JazdaDAO;
 import sk.upjs.ics.cestak.dao.PrihlasenieDAO;
 import sk.upjs.ics.cestak.dao.AutoDAO;
+import sk.upjs.ics.cestak.dao.VydavokDAO;
 import sk.upjs.ics.cestak.datbazoveDao.DtbJazdaDAO;
 import sk.upjs.ics.cestak.datbazoveDao.DtbPrihlasenieDAO;
 import sk.upjs.ics.cestak.datbazoveDao.DtbAutoDAO;
+import sk.upjs.ics.cestak.datbazoveDao.DtbVydavokDAO;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,6 +28,8 @@ public enum DaoFactory {
     private AutoDAO autoDao;
 
     private JazdaDAO jazdaDao;
+    
+    private VydavokDAO vydavokDao;
 
     private JdbcTemplate jdbcTemplate;
 
@@ -66,6 +70,13 @@ public enum DaoFactory {
             this.jazdaDao = new DtbJazdaDAO(jdbcTemplate());
         }
         return this.jazdaDao;
+    }
+    
+    public VydavokDAO vydavokDao() {
+        if (this.vydavokDao == null) {
+            this.vydavokDao = new DtbVydavokDAO(jdbcTemplate());
+        }
+        return this.vydavokDao;
     }
 
     private Properties getProperties() {

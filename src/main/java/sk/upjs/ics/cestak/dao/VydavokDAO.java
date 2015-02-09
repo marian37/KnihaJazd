@@ -6,7 +6,7 @@ import sk.upjs.ics.cestak.entity.Vydavok;
 
 public interface VydavokDAO {
     
-    List<Vydavok> vydavkyPodlaAuta(Auto auto);
+    List<Vydavok> vydavkyPodlaAuta(String autoSPZ);
     
     void saveVydavok(Vydavok vydavok);
     

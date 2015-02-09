@@ -22,9 +22,9 @@ public class DtbVydavokDAO implements VydavokDAO {
             = new BeanPropertyRowMapper<>(Vydavok.class);
 
     @Override
-    public List<Vydavok> vydavkyPodlaAuta(Auto auto) {
+    public List<Vydavok> vydavkyPodlaAuta(String autoSPZ) {
         String sql = "SELECT * FROM Vydavok WHERE autoSPZ = ?";
-        List<Vydavok> s = jdbcTemplate.query(sql, mapovac, auto.getSpz());
+        List<Vydavok> s = jdbcTemplate.query(sql, mapovac, autoSPZ);
 
         return s;
     }
@@ -45,7 +45,7 @@ public class DtbVydavokDAO implements VydavokDAO {
             String sql = "UPDATE Vydavok\n"
                     + "SET autoSPZ = ?,\n"
                     + "kategoria = ?,\n"
-                    + "suma = ?,\n"
+                    + "suma = ?\n"
                     + "WHERE id = ?";
 
             jdbcTemplate.update(sql, vydavok.getAutoSPZ(), vydavok.getKategoria(), vydavok.getSuma(), vydavok.getId());

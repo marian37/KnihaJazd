@@ -1,14 +1,14 @@
 package sk.upjs.ics.cestak.entity;
 
 public class Vydavok {
-    
+
     private Long id;
-    
+
     private String autoSPZ;
-    
+
     private String kategoria;
-    
-    private int suma;
+
+    private double suma;
 
     /**
      * @return the auto
@@ -20,8 +20,8 @@ public class Vydavok {
     /**
      * @param auto the auto to set
      */
-    public void setAutoSPZ(Auto auto) {
-        this.autoSPZ = auto.getSpz(); // este v stadiu riesenia asjf[aspdfkasldas][dl
+    public void setAutoSPZ(String autoSPZ) {
+        this.autoSPZ = autoSPZ;
     }
 
     /**
@@ -41,14 +41,14 @@ public class Vydavok {
     /**
      * @return the suma
      */
-    public int getSuma() {
+    public double getSuma() {
         return suma;
     }
 
     /**
      * @param suma the suma to set
      */
-    public void setSuma(int suma) {
+    public void setSuma(double suma) {
         this.suma = suma;
     }
 
