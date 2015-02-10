@@ -249,10 +249,10 @@ public class Grafy extends JDialog {
                 GradientPaintTransformType.VERTICAL));
         plot.setBackground(db);
         // Nastavenie napisu
-        DialTextAnnotation annotation1 = new DialTextAnnotation("Priemerná rýchlosť");
+        DialTextAnnotation annotation1 = new DialTextAnnotation("Priemerná rýchlosť (km/h)");
         annotation1.setFont(new Font("Dialog", Font.BOLD, 14));
         annotation1.setPaint(Color.RED);
-        annotation1.setRadius(0.45);
+        annotation1.setRadius(0.35);
 
         plot.addLayer(annotation1);
 
@@ -260,7 +260,7 @@ public class Grafy extends JDialog {
         DialValueIndicator dvi = new DialValueIndicator(0);
         dvi.setFont(new Font("Dialog", Font.PLAIN, 14));
         dvi.setOutlinePaint(Color.darkGray);
-        dvi.setRadius(0.68);
+        dvi.setRadius(0.58);
         dvi.setAngle(-90.0);
         plot.addLayer(dvi);
 
