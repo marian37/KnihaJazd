@@ -18,7 +18,7 @@ public class Vydavok {
     }
 
     /**
-     * @param auto the auto to set
+     * @param autoSPZ the autoSPZ to set
      */
     public void setAutoSPZ(String autoSPZ) {
         this.autoSPZ = autoSPZ;

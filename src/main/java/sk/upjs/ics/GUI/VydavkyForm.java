@@ -97,8 +97,8 @@ public class VydavkyForm extends JFrame {
 
     private void btnPridajActionPerformed(ActionEvent e) {
         PridatVydavokForm pridatVydavokForm = new PridatVydavokForm(login, autoSPZ, this);
-        pridatVydavokForm.setVisible(true);
         pridatVydavokForm.setLocationRelativeTo(CENTER_SCREEN);
+        pridatVydavokForm.setVisible(true);
     }
 
     private void btnUpravActionPerformed(ActionEvent e) {
@@ -107,8 +107,8 @@ public class VydavkyForm extends JFrame {
         Vydavok vydavok = vydavokTableModel.dajPodlaCislaRiadku(vybratyIndexVModeli);
 
         PridatVydavokForm pridatVydavokForm = new PridatVydavokForm(vydavok, this);
-        pridatVydavokForm.setVisible(true);
         pridatVydavokForm.setLocationRelativeTo(CENTER_SCREEN);
+        pridatVydavokForm.setVisible(true);
     }
 
     private void btnVymazActionPerformed(ActionEvent e) {

@@ -1,4 +1,4 @@
-package sk.upjs.ics.cestak.datbazoveDao;
+package sk.upjs.ics.cestak.databazoveDao;
 
 import java.util.HashMap;
 import java.util.List;

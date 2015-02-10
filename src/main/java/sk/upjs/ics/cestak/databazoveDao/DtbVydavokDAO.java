@@ -1,4 +1,4 @@
-package sk.upjs.ics.cestak.datbazoveDao;
+package sk.upjs.ics.cestak.databazoveDao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import sk.upjs.ics.cestak.dao.VydavokDAO;
-import sk.upjs.ics.cestak.entity.Auto;
 import sk.upjs.ics.cestak.entity.Vydavok;
 
 public class DtbVydavokDAO implements VydavokDAO {

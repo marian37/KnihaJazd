@@ -1,4 +1,3 @@
-
 package sk.upjs.ics.GUI;
 
 import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
@@ -25,7 +24,6 @@ import javax.swing.LookAndFeel;
 import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import net.miginfocom.swing.MigLayout;
 import sk.upjs.ics.cestak.DaoFactory;
 import sk.upjs.ics.cestak.entity.Login;
